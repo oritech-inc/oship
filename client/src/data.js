@@ -19,11 +19,11 @@ function data() {
 function getAppInfo() {
     return (
         {
-            name: 'Oshipp',
+            name: 'OsHIP',
             version: '0.0.1',
             release: 'Dev',
             year: '2023',
-            author: 'Oritech Limited'
+            author: 'Origintech Limited'
         }
     )
 }

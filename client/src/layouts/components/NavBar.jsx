@@ -5,26 +5,27 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { AppData } from '../../data'
 
 function NavBar() {
-    let appdata = AppData[0]
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark" fixed="top">
             <Container>
-                <Navbar.Brand href="#home">
-                    {appdata.appInfo.name}
+                <Navbar.Brand href="/">
+                    {AppData[0].appInfo.name}
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/nearby">Search</Nav.Link>
+                        <Nav.Link href="/live">Live</Nav.Link>
+                    </Nav>
+                    <Nav>
+                        <NavDropdown title="Accounts" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="/accounts">Register</NavDropdown.Item>
+                            <NavDropdown.Item href="/accounts">
+                                Login
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
+                            <NavDropdown.Item href="/">
                                 Separated link
                             </NavDropdown.Item>
                         </NavDropdown>
